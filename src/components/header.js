@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, graphql, useStaticQuery } from 'gatsby';
 // I can use .module for scss to make the class/id to be locally scoped.
 import headerStyles from '../styles/components/header.module.scss';
+import Pdf from '../assets/cv/KW-Nate-Park-Resume.pdf';
 
 const Header = () => {
   const data = useStaticQuery(graphql`
@@ -28,6 +29,7 @@ const Header = () => {
           <li><Link className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem} to="/project">PROJECT</Link></li>
           <li><Link className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem} to="/blog">BLOG</Link></li>
           <li><Link className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem} to="/contact">CONTACT</Link></li>
+          <li><a className={headerStyles.navItem} href={Pdf} target="_blank">RESUMÉ</a></li>
         </ul>
       </nav>
     </header>
