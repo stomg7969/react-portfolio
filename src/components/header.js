@@ -1,14 +1,24 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import { Link, graphql, useStaticQuery } from 'gatsby';
 // I can use .module for scss to make the class/id to be locally scoped.
 import headerStyles from '../styles/components/header.module.scss';
 
 const Header = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          author
+        }
+      }
+    }
+  `);
+
   return (
     <header className={headerStyles.header} >
       <h1>
         <Link className={headerStyles.title} to="/">
-          Nate (KyungWon) Park
+          {data.site.siteMetadata.author}
         </Link>
       </h1>
       <nav>

@@ -8,7 +8,11 @@
 
 module.exports = {
   /* Your site config here */
+  siteMetadata: {
+    title: "Hello! I'm KyungWon Park. I'm a full-stack developer",
+    author: 'KyungWon Park'
+  },
   plugins: [
     'gatsby-plugin-sass'
   ]
-}
+};
