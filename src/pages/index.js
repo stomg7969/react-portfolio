@@ -1,6 +1,19 @@
 import React from "react";
+import { Link } from 'gatsby';
 
-export default () => <div>Helloooo world!</div>
+import Layout from '../components/layout';
 
-// https://youtu.be/8t0vNu2fCCM 
-// 27 minutes, look at the comment
+const Index = () => {
+  return (
+    <Layout>
+      <h1>Helloooo world!</h1>
+      <p>Contact <Link to="/contact">Here</Link></p>
+    </Layout>
+  );
+};
+
+
+export default Index;
+
+// https://youtu.be/8t0vNu2fCCM
+// () minutes, look at the comment.
