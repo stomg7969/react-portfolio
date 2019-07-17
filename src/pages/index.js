@@ -27,6 +27,7 @@ const Index = () => {
         <div>
           <h2>{author}</h2>
           <p>{title}</p>
+          <p>Need 404 page</p>
           <ul>
             <li><a href="/#">Scroll down</a></li>
           </ul>
