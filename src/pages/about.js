@@ -1,16 +1,14 @@
 import React from 'react';
 import { Link } from 'gatsby';
 
-import Layout from '../components/layout';
+import aboutStyles from '../styles/pages/about.module.scss';
 
 const AboutPage = () => {
     return (
-        <Layout>
+        <div className={aboutStyles.container}>
             <h1>About Me</h1>
-            <p>I currently teach full-time on Udemy.</p>
-            <p><Link to="/contact">Want to work with me? Reach out.</Link></p>
-            <p><Link to="/">Back home</Link></p>
-        </Layout>
+            <p><Link to="/">Want to work with me? Reach out.</Link></p>
+        </div>
     );
 };
 

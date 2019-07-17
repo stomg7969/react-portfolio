@@ -1,14 +1,14 @@
 import React from 'react';
 
-import Layout from '../components/layout';
+import projectStyles from '../styles/pages/project.module.scss';
 
-const Project = () => {
+const ProjectPage = () => {
   return (
-    <Layout>
+    <div className={projectStyles.container}>
       <h1>Projects</h1>
       <p>projects will show up here later on.</p>
-    </Layout>
+    </div>
   );
 };
 
-export default Project;
+export default ProjectPage;

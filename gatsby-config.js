@@ -9,7 +9,7 @@
 module.exports = {
   /* Your site config here */
   siteMetadata: {
-    title: "Hello! I'm KyungWon Park. I'm a full-stack developer",
+    title: "Full-Stack Developer. AWS Certified Cloud Practitioner  ",
     author: 'KyungWon Park'
   },
   plugins: [

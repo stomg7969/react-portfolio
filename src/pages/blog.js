@@ -1,14 +1,14 @@
 import React from 'react';
 
-import Layout from '../components/layout';
+import blogStyles from '../styles/pages/blog.module.scss';
 
-const Blog = () => {
+const BlogPage = () => {
     return (
-        <Layout>
+        <div className={blogStyles.container}>
             <h1>Blog</h1>
             <p>Posts will show up here later on.</p>
-        </Layout>
+        </div>
     );
 };
 
-export default Blog;
+export default BlogPage;
