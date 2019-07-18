@@ -1,48 +1,25 @@
-/**
- * Configure your Gatsby site with this file.
- * 
- * See: https://www.gatsbyjs.org/docs/gatsby-config/
- * My memo: This where we list out names like plugins.
- * If npm run develop, gatsby will look at THIS gatsby-config.js then initiate.
- */
+const { config } = require('./config');
 
 module.exports = {
-  /* Your site config here */
+  pathPrefix: config.pathPrefix,
   siteMetadata: {
-    title: "Full-Stack Developer. AWS Certified Cloud Practitioner  ",
-    author: 'KyungWon Park'
+    title: config.siteTitle,
   },
   plugins: [
-    'gatsby-plugin-sass',
+    'gatsby-plugin-react-helmet',
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'src',
-        path: `${__dirname}/src/`
-      }
+        name: config.manifestName,
+        short_name: config.manifestShortName,
+        start_url: config.pathPrefix || config.manifestStartUrl,
+        background_color: config.manifestBackgroundColor,
+        theme_color: config.manifestThemeColor,
+        display: config.manifestDisplay,
+        icon: config.manifestIcon, // This path is relative to the root of the site.
+      },
     },
-    'gatsby-plugin-sharp',
-    {
-      resolve: 'gatsby-transformer-remark',
-      options: {
-        plugins: [
-          'gatsby-remark-relative-images',
-          {
-            resolve: 'gatsby-remark-images',
-            options: {
-              maxWidth: 750,
-              linkImagesToOriginal: false
-            }
-          }
-        ]
-      }
-    }
-  ]
+    'gatsby-plugin-sass',
+    'gatsby-plugin-offline',
+  ],
 };
-// For dynamically rendering blog posts: ONLY if posts are listed in the assets.
-// npm install gatsby-source-filesystem
-// npm install gatsby-transformer-remark
-// Adding images for blogging
-// npm install gatsby-plugin-sharp
-// npm install gatsby-remark-images
-// npm install gatsby-remark-relative-images

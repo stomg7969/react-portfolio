@@ -1,24 +1,26 @@
 import React from 'react';
-import { Link, graphql, useStaticQuery } from 'gatsby';
-
-const Footer = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      site {
-        siteMetadata {
-          author
-        }
-      }
-    }
-  `);
-
+import { config } from '../../config';
+export default function Footer() {
   return (
-    <footer>
-      <p>my social media link here? including resume</p>
-      <p>scroll to the top button..</p>
-      <h4>{data.site.siteMetadata.author}, © 2019</h4>
+    <footer id="footer">
+      <ul className="icons">
+        {config.socialLinks.map(social => {
+          const { style, icon, name, url } = social;
+          return (
+            <li key={url}>
+              <a href={url} className={`icon ${style} ${icon}`}>
+                <span className="label">{name}</span>
+              </a>
+            </li>
+          );
+        })}
+      </ul>
+      <ul className="copyright">
+        <li>&copy; Spectral</li>
+        <li>
+          Design: <a href="http://html5up.net">HTML5 UP</a>
+        </li>
+      </ul>
     </footer>
   );
-};
-
-export default Footer;
+}

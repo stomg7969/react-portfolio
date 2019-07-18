@@ -2,9 +2,10 @@
 <h1 align="center">
   KYUNGWON PARK's PORTFOLIO
 </h1>
-Portfolio created with Gatsby's basic 'hello world' starter.
 
-## Here
+## Portfolio created with Gatsby's Spectral starter.
+
+[GitHub](https://github.com/anubhavsrivastava/gatsby-starter-spectral)
 
 <h1></h1>
 <h1></h1>
