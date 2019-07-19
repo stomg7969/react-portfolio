@@ -1,13 +1,16 @@
 import React from 'react';
 
 import Layout from '../components/Layout';
-
 import Scroll from '../components/Scroll';
+
+import { config } from '../../config';
+import '../styles/pages/index.scss';
 
 import pic1 from '../assets/images/pic01.jpg';
 import pic2 from '../assets/images/pic02.jpg';
 import pic3 from '../assets/images/pic03.jpg';
-import { config } from '../../config';
+import self from '../assets/images/portrait.jpg';
+
 const IndexPage = () => (
   <Layout>
     <section id="banner">
@@ -34,18 +37,19 @@ const IndexPage = () => (
     <section id="one" className="wrapper style1 special">
       <div className="inner">
         <header className="major">
-          <h2>
-            Arcu aliquet vel lobortis ata nisl
-            <br />
-            eget augue amet aliquet nisl cep donec
-          </h2>
+          <h2>About</h2>
+          <div>
+            <img src={self} alt="portrait" id="portrait" />
+          </div>
           <p>
-            Aliquam ut ex ut augue consectetur interdum. Donec amet imperdiet
-            eleifend
-            <br />
-            fringilla tincidunt. Nullam dui leo Aenean mi ligula, rhoncus
-            ullamcorper.
+            I'm a full-stack developer with serious passion
+            for developing softwares that provide the best user experiences.
           </p>
+          <p>--> some more sentences</p>
+          <p>--> My skills and AWS mark</p>
+          <p>--> contact button (screen to the bottom)</p>
+          <p>--> social media links (LinkedIn, GitHub, Medium, CV)</p>
+
         </header>
         <ul className="icons major">
           <li>
@@ -74,14 +78,13 @@ const IndexPage = () => (
         </div>
         <div className="content">
           <h2>
-            Magna primis lobortis
-            <br />
-            sed ullamcorper
+            Remove Picture
           </h2>
           <p>
-            Aliquam ut ex ut augue consectetur interdum. Donec hendrerit
-            imperdiet. Mauris eleifend fringilla nullam aenean mi ligula.
+            All the projects.
           </p>
+          <p>List them into each section (no flex)</p>
+          <p>- project 1</p>
         </div>
       </section>
       <section className="spotlight">
@@ -91,12 +94,9 @@ const IndexPage = () => (
         <div className="content">
           <h2>
             Tortor dolore feugiat
-            <br />
-            elementum magna
           </h2>
           <p>
-            Aliquam ut ex ut augue consectetur interdum. Donec hendrerit
-            imperdiet. Mauris eleifend fringilla nullam aenean mi ligula.
+            - project 2
           </p>
         </div>
       </section>
@@ -107,12 +107,9 @@ const IndexPage = () => (
         <div className="content">
           <h2>
             Augue eleifend aliquet
-            <br />
-            sed condimentum
           </h2>
           <p>
-            Aliquam ut ex ut augue consectetur interdum. Donec hendrerit
-            imperdiet. Mauris eleifend fringilla nullam aenean mi ligula.
+            - project 3
           </p>
         </div>
       </section>
@@ -121,14 +118,11 @@ const IndexPage = () => (
     <section id="three" className="wrapper style3 special">
       <div className="inner">
         <header className="major">
-          <h2>Accumsan mus tortor nunc aliquet</h2>
+          <h2>blogs</h2>
           <p>
-            Aliquam ut ex ut augue consectetur interdum. Donec amet imperdiet
-            eleifend
-            <br />
-            fringilla tincidunt. Nullam dui leo Aenean mi ligula, rhoncus
-            ullamcorper.
+            list of blogs from medium
           </p>
+          <p>My blogs aren't that good except one, should not list?</p>
         </header>
         <ul className="features">
           <li className="icon fa-paper-plane">
@@ -180,10 +174,9 @@ const IndexPage = () => (
     <section id="cta" className="wrapper style4">
       <div className="inner">
         <header>
-          <h2>Arcue ut vel commodo</h2>
+          <h2>Contact me here ...?</h2>
           <p>
-            Aliquam ut ex ut augue consectetur interdum endrerit imperdiet amet
-            eleifend fringilla.
+            or just email. What can I do here?
           </p>
         </header>
         <ul className="actions stacked">
