@@ -49,6 +49,7 @@ const IndexPage = () => (
           <p>--> My skills and AWS mark</p>
           <p>--> contact button (screen to the bottom)</p>
           <p>--> social media links (LinkedIn, GitHub, Medium, CV)</p>
+          <p>--> make sure to refactor codes, React Hooks!!!!</p>
 
         </header>
         <ul className="icons major">
