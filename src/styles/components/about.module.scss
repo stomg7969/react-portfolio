@@ -1,0 +1,29 @@
+#portrait {
+  max-width: 200px;
+  height: auto;
+  clip-path: circle(100px at center);
+}
+.image-link {
+  text-decoration: none;
+}
+.icons {
+  max-width: 100px;
+}
+.logo {
+  max-width: 50px;
+}
+#profile {
+  margin: 20px auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: stretch;
+  div {
+    flex: 1;
+  }
+}
+@media (max-width: 300px) {
+  #profile {
+    display: block;
+  }
+}

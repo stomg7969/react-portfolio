@@ -1,0 +1,139 @@
+#skills {
+  width: 80%;
+  margin: 0 auto;
+}
+#skills-list {
+  list-style: none;
+  padding: 0;
+  li {
+    margin: 20px 0;
+    p {
+      font-size: 90%;
+      text-align: left;
+      margin-bottom: 10px;
+    }
+  }
+}
+.bar {
+  background: #353b48;
+  display: block;
+  height: 5px;
+  border: 2px solid rbga(0,0,0,0.3);
+  border-radius: 3px;
+  overflow: hidden;
+  box-shadow: 0 0 10px #2187e7b3;
+}
+.bar span {
+  height: 5px;
+  float: left;
+  background: #2187e7;
+}
+.html {
+  width: 90%;
+  animation: html 5s;
+}
+@keyframes html {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 90%
+  }
+}
+.css {
+  width: 50%;
+  animation: css 5s;
+}
+@keyframes css {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 50%
+  }
+}
+.javascript {
+  width: 90%;
+  animation: javascript 5s;
+}
+@keyframes javascript {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 90%
+  }
+}
+.react {
+  width: 80%;
+  animation: react 5s;
+}
+@keyframes react {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 80%
+  }
+}
+.redux {
+  width: 50%;
+  animation: redux 5s;
+}
+@keyframes redux {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 50%
+  }
+}
+.ruby {
+  width: 90%;
+  animation: ruby 5s;
+}
+@keyframes ruby {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 90%
+  }
+}
+.jquery {
+  width: 50%;
+  animation: jquery 5s;
+}
+@keyframes jquery {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 50%
+  }
+}
+.nodejs {
+  width: 60%;
+  animation: nodejs 5s;
+}
+@keyframes nodejs {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 60%
+  }
+}
+.graphql {
+  width: 70%;
+  animation: graphql 5s;
+}
+@keyframes graphql {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 70%
+  }
+}
+

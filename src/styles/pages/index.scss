@@ -1,8 +1,39 @@
 #one {
   background-color: rgba($color: #000000, $alpha: 0.5);
 }
-#portrait {
-  max-width: 200px;
-  height: auto;
-  clip-path: circle(100px at center);
+a {
+  text-decoration: none;
+}
+#go-top {
+  display: none; /* Hidden by default */
+  animation: bounceIn 2s;
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: rgba($color: #000, $alpha: 0); /* Set a background color */
+  color: white; /* Text color */
+  padding: 0 7px 0 10px;
+  cursor: pointer; /* Add a mouse pointer on hover */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 15px; /* Increase font size */
+  &:hover {
+    background-color: rgba($color: #fff, $alpha: 1);
+    color: black;
+  }
+}
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.1);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
 }

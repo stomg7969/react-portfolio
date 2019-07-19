@@ -8,12 +8,8 @@ import Footer from './Footer';
 import SideBar from './Sidebar';
 
 class Layout extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      isPreloaded: true,
-    };
-  }
+
+  state = { isPreloaded: true };
 
   componentDidMount() {
     this.timeoutId = setTimeout(() => {
