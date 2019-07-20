@@ -13,7 +13,7 @@ const ProjectPage = () => {
         </div>
         <div className="content">
           <h2>Remove Picture</h2>
-          <p>All the projects.</p>
+          <p>All the projects. Add white border line of pic?</p>
           <p>List them into each section (no flex)</p>
           <p>- project 1</p>
         </div>
