@@ -34,7 +34,7 @@ const AboutPage = () => {
             <img src={self} alt="portrait" id={aboutStyles.portrait} />
             <p>I'm a full-stack developer with serious passion for developing softwares that provide the best user experiences.</p>
             <p>I believe in Cloud Computing. Pursuing AWS Certification studies will enhance my knowledge further.</p>
-            <a href="http://www.certmetrics.com/amazon/public/badge.aspx?i=9&t=c&d=2019-07-12&ci=AWS00914171" className={aboutStyles.imageLink}>
+            <a href="http://www.certmetrics.com/amazon/public/badge.aspx?i=9&t=c&d=2019-07-12&ci=AWS00914171" target="_blank" className={aboutStyles.imageLink}>
               <img src="https://www.certmetrics.com/api/ob/image/amazon/c/9" alt="aws cp" className={aboutStyles.icons} />
             </a>
           </div>
