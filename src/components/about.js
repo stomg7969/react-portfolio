@@ -13,8 +13,21 @@ import resume from '../assets/images/resume.png';
 import pdf from '../assets/cv/resume.pdf';
 
 const AboutPage = () => {
+
+  const copyEmail = () => {
+    const fullText = document.getElementById("myEmail");
+    const fullEmail = fullText.innerText.split(' ');
+    const fakeInput = document.createElement('input');
+    document.body.appendChild(fakeInput);
+    fakeInput.value = fullEmail[fullEmail.length - 1].toLowerCase();
+    fakeInput.select();
+    document.execCommand('copy');
+    fakeInput.remove();
+    alert("Copied to Clipboard: " + fakeInput.value);
+  };
+
   return (
-    <>
+    <div className="inner">
       <header className="major">
         <h2>About</h2>
         <div id={aboutStyles.profile}>
@@ -28,8 +41,7 @@ const AboutPage = () => {
           </div>
           <Skills />
         </div>
-        <h4>stomg7969@gmail.com</h4>
-        <button></button>
+        <h4 id="myEmail" onClick={copyEmail}>click to copy: stomg7969@gmail.com</h4>
         <h2>make sure to refactor codes, React Hooks!!!!</h2>
       </header>
       <ul className="icons major">
@@ -46,7 +58,7 @@ const AboutPage = () => {
           <a href={pdf} target="_blank" className={aboutStyles.imageLink}><img src={resume} alt="resume icon by ancorp.com" className={aboutStyles.logo} /></a>
         </li>
       </ul>
-    </>
+    </div>
   );
 };
 

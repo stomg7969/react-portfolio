@@ -1,24 +1,22 @@
 import React from 'react';
 
 import Layout from '../components/Layout';
-import Scroll from '../components/Scroll';
+
+import Landing from '../components/landing';
 import About from '../components/about';
+import Project from '../components/project';
 
-import { config } from '../../config';
 import '../styles/pages/index.scss';
-
-import pic1 from '../assets/images/pic01.jpg';
-import pic2 from '../assets/images/pic02.jpg';
-import pic3 from '../assets/images/pic03.jpg';
 
 const IndexPage = () => {
   window.onscroll = function () { scrollFunction() };
   // When the user scrolls down 20px from the top of the document, show the button
   const scrollFunction = () => {
+    const goTopBtn = document.getElementById('go-top');
     if (document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000) {
-      document.getElementById("go-top").style.display = "block";
+      goTopBtn ? goTopBtn.style.display = "block" : console.log('Go Top Button disabled due to an error');
     } else {
-      document.getElementById("go-top").style.display = "none";
+      goTopBtn.style.display = "none";
     }
   };
   // When the user clicks on the button, scroll to the top of the document
@@ -30,74 +28,15 @@ const IndexPage = () => {
   return (
     <Layout>
       <section id="banner">
-        <div className="inner">
-          <h2>{config.heading}</h2>
-          <p>{config.subHeading}</p>
-          <ul className="actions special">
-            <li>
-              <Scroll type="id" element="one">
-                <a href="/#" className="button primary">
-                  Explore
-              </a>
-              </Scroll>
-            </li>
-          </ul>
-        </div>
-        <Scroll type="id" element="one">
-          <a href="#one" className="more">
-            Learn More
-        </a>
-        </Scroll>
+        <Landing />
       </section>
 
       <section id="one" className="wrapper style1 special">
-        <div className="inner">
-          <About />
-        </div>
+        <About />
       </section>
 
       <section id="two" className="wrapper alt style2">
-        <section className="spotlight">
-          <div className="image">
-            <img src={pic1} alt="" />
-          </div>
-          <div className="content">
-            <h2>
-              Remove Picture
-          </h2>
-            <p>
-              All the projects.
-          </p>
-            <p>List them into each section (no flex)</p>
-            <p>- project 1</p>
-          </div>
-        </section>
-        <section className="spotlight">
-          <div className="image">
-            <img src={pic2} alt="" />
-          </div>
-          <div className="content">
-            <h2>
-              Tortor dolore feugiat
-          </h2>
-            <p>
-              - project 2
-          </p>
-          </div>
-        </section>
-        <section className="spotlight">
-          <div className="image">
-            <img src={pic3} alt="" />
-          </div>
-          <div className="content">
-            <h2>
-              Augue eleifend aliquet
-          </h2>
-            <p>
-              - project 3
-          </p>
-          </div>
-        </section>
+        <Project />
       </section>
 
       <section id="three" className="wrapper style3 special">
