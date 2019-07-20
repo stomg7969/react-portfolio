@@ -12,7 +12,7 @@ export default function Footer() {
       <a className={aboutStyles.imageLink} href="https://www.linkedin.com/in/k1natepark/" target="_blank">
         <img className={aboutStyles.logo} src={linkedin} alt="linkedin" />
       </a>
-      <p id="myEmail" onClick={copyEmail}>Click to copy: stomg7969@gmail.com</p>
+      <p id="myEmail" className={aboutStyles.myEmail} onClick={copyEmail}>Click to copy: stomg7969@gmail.com</p>
       {/* <ul className="icons">
         {config.socialLinks.map(social => {
           const { style, icon, name, url } = social;

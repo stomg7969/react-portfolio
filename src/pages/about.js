@@ -33,7 +33,7 @@ const AboutPage = () => {
           </div>
           <Skills />
         </div>
-        <h4 id="myEmail" onClick={copyEmail}>click to copy: stomg7969@gmail.com</h4>
+        <h4 id="myEmail" className={aboutStyles.myEmail} onClick={copyEmail}>click to copy: stomg7969@gmail.com</h4>
       </header>
       <ul className="icons major">
         <li>
