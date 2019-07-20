@@ -3,7 +3,6 @@ import { config } from '../../config';
 export default function Footer() {
   return (
     <footer id="footer">
-    <p>scroll up button here</p>
       <ul className="icons">
         {config.socialLinks.map(social => {
           const { style, icon, name, url } = social;
