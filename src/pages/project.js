@@ -110,7 +110,7 @@ const ProjectPage = () => {
           <img src={parkingLot} alt="" />
         </div>
         <div className="content">
-          <h2>Parking lot: "Don't drink and drive"</h2>
+          <h2>Parking lot: "Park & Drink"</h2>
           <p>
             A parking space management application that automatically keeps
             track of car information, time, and total amount owed.
