@@ -2,9 +2,9 @@ import React from 'react';
 
 import Layout from '../components/Layout';
 
-import Landing from '../components/landing';
-import About from '../components/about';
-import Project from '../components/project';
+import Landing from './landing';
+import About from './about';
+import Project from './project';
 
 import '../styles/pages/index.scss';
 
@@ -116,6 +116,9 @@ const IndexPage = () => {
             </li>
           </ul>
         </div>
+        <h2>Refactor: React Hooks! (Layout page)</h2>
+        <h2>Study how the menu button works...</h2>
+        <h2>...after studying the menu, change it to resume link</h2>
       </section>
       <button onClick={topFunction} id="go-top" title="Go to top">TOP</button>
     </Layout>

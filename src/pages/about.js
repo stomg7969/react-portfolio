@@ -1,5 +1,4 @@
 import React from 'react';
-// import {Link} from 'gatsby';
 
 import Skills from '../components/skills';
 
@@ -42,7 +41,6 @@ const AboutPage = () => {
           <Skills />
         </div>
         <h4 id="myEmail" onClick={copyEmail}>click to copy: stomg7969@gmail.com</h4>
-        <h2>make sure to refactor codes, React Hooks!!!!</h2>
       </header>
       <ul className="icons major">
         <li>

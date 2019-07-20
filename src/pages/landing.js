@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Scroll from './Scroll';
+import Scroll from '../components/Scroll';
 import { config } from '../../config';
 
 const LandingPage = () => {
