@@ -28,7 +28,7 @@ const IndexPage = () => {
     setTimeout(() => setEmailClicked(false), 5000);
   };
 
-  window.onscroll = function () { scrollFunction() };
+  document.body.onscroll = function () { scrollFunction() };
   // When the user scrolls down 20px from the top of the document, show the button
   const scrollFunction = () => {
     const goTopBtn = document.getElementById('go-top');
