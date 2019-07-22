@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import Layout from '../components/Layout';
 import Landing from './landing';
@@ -28,7 +28,10 @@ const IndexPage = () => {
     setTimeout(() => setEmailClicked(false), 5000);
   };
 
-  document.body.onscroll = function () { scrollFunction() };
+  useEffect(() => {
+    window.onscroll = function () { scrollFunction() };
+  });
+
   // When the user scrolls down 20px from the top of the document, show the button
   const scrollFunction = () => {
     const goTopBtn = document.getElementById('go-top');
