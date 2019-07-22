@@ -6,7 +6,7 @@ const IndexPage = () => (
   <Layout fullMenu>
     <article id="main">
       <header>
-        <h2>Not Found</h2>
+        <h2>Page Not Found</h2>
         <p>Not a Valid URL</p>
       </header>
     </article>
