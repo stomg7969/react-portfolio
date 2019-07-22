@@ -18,7 +18,6 @@ const LandingPage = () => {
             </Scroll>
           </li>
         </ul>
-        <h3>learn about @media scss, for scalable portion</h3>
       </div>
       <Scroll type="id" element="one">
         <a href="#one" className="more">
