@@ -24,7 +24,7 @@ const IndexPage = () => {
     fakeInput.remove();
     // State change
     setEmailClicked(true);
-    // Timer to remove check mark.
+    // Timer to remove check mark..
     setTimeout(() => setEmailClicked(false), 5000);
   };
 
