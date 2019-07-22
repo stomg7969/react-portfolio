@@ -1,46 +1,62 @@
 import React from 'react';
 
+import blogStyles from '../styles/pages/blog.module.scss';
+
+import medium2 from '../assets/logo/medium2.png';
+
 const BlogPage = () => {
   return (
     <>
       <div className="inner">
         <header className="major">
           <h2>blogs</h2>
-          <p>
-            list of blogs from medium (maybe the most recent one?)
-          </p>
-          <p>My blogs aren't that good except one, should not list?</p>
         </header>
-        <ul className="features">
+        <ul id={blogStyles.background} className="features">
           <li className="icon fa-paper-plane">
-            <h3>Arcu accumsan</h3>
+            <h4>Creating a multi-filter function to filter ...</h4>
             <p>
-              Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem
-              tincidunt nullam amet leo Aenean ligula consequat consequat.
+              While building the site, my biggest challenge was writing a filter()
+              function where customers can click on tags to narrow down ...
             </p>
+            <i>MAY 11, 2019</i><br />
+            <a href="https://medium.com/better-programming/creating-a-multi-filter-function-to-filter-out-multiple-attributes-javascript-react-rails-5aad8e272142" target="_blank">
+              <img className={blogStyles.blogImage} src={medium2} alt="medium word logo" />
+            </a>
           </li>
           <li className="icon solid fa-laptop">
-            <h3>Ac Augue Eget</h3>
+            <h4>Use axios.js for your HTTP requests!</h4>
             <p>
-              Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem
-              tincidunt nullam amet leo Aenean ligula consequat consequat.
+              When I first learned Javascript, I developed an application without
+              using any external libraries or frameworks. ...
             </p>
+            <i>MAY 21, 2019</i><br />
+            <a href="https://medium.com/@stomg7969/use-axios-js-for-your-http-requests-1c56e47433e2" target="_blank">
+              <img className={blogStyles.blogImage} src={medium2} alt="medium word logo" />
+            </a>
           </li>
           <li className="icon solid fa-code">
-            <h3>Mus Scelerisque</h3>
+            <h4>Use your time more efficiently (Javascript Frontend).</h4>
             <p>
-              Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem
-              tincidunt nullam amet leo Aenean ligula consequat consequat.
+              When you have to work under time pressure, it would be more productive
+              if ...
             </p>
+            <i>MARCH 26, 2019</i><br />
+            <a href="https://medium.com/@stomg7969/use-your-time-more-efficiently-javascript-frontend-8274ba2e75f9" target="_blank">
+              <img className={blogStyles.blogImage} src={medium2} alt="medium word logo" />
+            </a>
           </li>
           <li className="icon solid fa-headphones-alt">
-            <h3>Mauris Imperdiet</h3>
+            <h4>Let’s be Test-driven Development (TDD).</h4>
             <p>
-              Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem
-              tincidunt nullam amet leo Aenean ligula consequat consequat.
+              Flatiron School students learn materials from Learn.co. Through
+              our terminal, we use the commnads: 'learn open', 'learn', and ...
             </p>
+            <i>MARCH 5, 2019</i><br />
+            <a href="https://medium.com/@stomg7969/lets-be-test-driven-development-tdd-a974a5c63919" target="_blank">
+              <img className={blogStyles.blogImage} src={medium2} alt="medium word logo" />
+            </a>
           </li>
-          <li className="icon fa-heart">
+          {/* <li className="icon fa-heart">
             <h3>Aenean Primis</h3>
             <p>
               Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem
@@ -53,7 +69,7 @@ const BlogPage = () => {
               Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem
               tincidunt nullam amet leo Aenean ligula consequat consequat.
             </p>
-          </li>
+          </li> */}
         </ul>
       </div>
     </>
