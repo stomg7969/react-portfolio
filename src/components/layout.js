@@ -16,7 +16,6 @@ class Layout extends Component {
       this.setState({ isPreloaded: false });
     }, 100);
   }
-
   componentWillUnmount() {
     if (this.timeoutId) {
       clearTimeout(this.timeoutId);
@@ -24,6 +23,7 @@ class Layout extends Component {
   }
 
   render() {
+    const { emailClicked, emailHandler } = this.props;
     const { children, fullMenu } = this.props;
     const { isPreloaded } = this.state;
     return (
@@ -58,7 +58,10 @@ class Layout extends Component {
               <div id="page-wrapper">
                 <SideBar fullMenu={fullMenu} />
                 {children}
-                <Footer />
+                <Footer
+                  emailHandler={emailHandler}
+                  emailClicked={emailClicked}
+                />
               </div>
             </div>
           </>

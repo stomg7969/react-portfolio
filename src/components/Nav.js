@@ -1,12 +1,16 @@
 import React from 'react';
-import { Link } from 'gatsby';
+// import { Link } from 'gatsby';
+import pdf from '../assets/cv/resume.pdf';
 
-export default function Nav({ onMenuToggle = () => {} }) {
+export default function Nav({ onMenuToggle = () => { } }) {
   return (
     <nav id="nav">
       <ul>
         <li className="special">
-          <a
+          <a href={pdf} target="_blank">
+            <span>Resume</span>
+          </a>
+          {/* <a
             href="#menu"
             onClick={e => {
               e.preventDefault();
@@ -16,7 +20,7 @@ export default function Nav({ onMenuToggle = () => {} }) {
           >
             <span>Menu</span>
           </a>
-          <div id="menu">
+           <div id="menu">
             <ul>
               <li>
                 <Link to="/">Home</Link>
@@ -38,7 +42,7 @@ export default function Nav({ onMenuToggle = () => {} }) {
             >
               {''}
             </a>
-          </div>
+          </div> */}
         </li>
       </ul>
     </nav>

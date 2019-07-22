@@ -1,14 +1,33 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import Layout from '../components/Layout';
 import Landing from './landing';
 import About from './about';
 import Project from './project';
 import Blog from './blog';
-
 import '../styles/pages/index.scss';
+// import copyEmail from '../helper/copyEmail';
 
 const IndexPage = () => {
+
+  const [emailClicked, setEmailClicked] = useState(false);
+
+  const emailHandler = () => {
+    // Temporarily create an input fill to copy text. 
+    const fullText = document.getElementById("myEmail");
+    const fullEmail = fullText.innerText.split(' ');
+    const fakeInput = document.createElement('input');
+    document.body.appendChild(fakeInput);
+    fakeInput.value = fullEmail[fullEmail.length - 1].toLowerCase();
+    fakeInput.select();
+    document.execCommand('copy');
+    fakeInput.remove();
+    // State change
+    setEmailClicked(true);
+    // Timer to remove check mark.
+    setTimeout(() => setEmailClicked(false), 5000);
+  };
+
   window.onscroll = function () { scrollFunction() };
   // When the user scrolls down 20px from the top of the document, show the button
   const scrollFunction = () => {
@@ -16,7 +35,7 @@ const IndexPage = () => {
     if (document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000) {
       goTopBtn ? goTopBtn.style.display = "block" : console.log('Go Top Button disabled due to an error');
     } else {
-      goTopBtn.style.display = "none";
+      goTopBtn ? goTopBtn.style.display = "none" : console.log('Go Top Button disabled due to an error');
     }
   };
   // When the user clicks on the button, scroll to the top of the document
@@ -26,13 +45,19 @@ const IndexPage = () => {
   };
 
   return (
-    <Layout>
+    <Layout
+      emailHandler={emailHandler}
+      emailClicked={emailClicked}
+    >
       <section id="banner">
         <Landing />
       </section>
 
       <section id="one" className="wrapper style1 special">
-        <About />
+        <About
+          emailHandler={emailHandler}
+          emailClicked={emailClicked}
+        />
       </section>
 
       <section id="two" className="wrapper alt style2">
@@ -43,7 +68,7 @@ const IndexPage = () => {
         <Blog />
       </section>
 
-      <section id="cta" className="wrapper style4">
+      {/* <section id="cta" className="wrapper style4">
         <div className="inner">
           <header>
             <h2>Contact me here ...?</h2>
@@ -64,10 +89,8 @@ const IndexPage = () => {
             </li>
           </ul>
         </div>
-        <h2>Refactor: React Hooks! (Layout page)</h2>
-        <h2>Study how the menu button works...</h2>
-        <h2>...after studying the menu, change it to resume link</h2>
-      </section>
+      </section> */}
+
       <button onClick={topFunction} id="go-top" title="Go to top">TOP</button>
     </Layout>
   );

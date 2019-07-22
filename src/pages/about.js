@@ -11,7 +11,8 @@ import medium from '../assets/logo/medium.png';
 import resume from '../assets/images/resume.png';
 import pdf from '../assets/cv/resume.pdf';
 
-const AboutPage = () => {
+const AboutPage = props => {
+  const { emailClicked, emailHandler } = props;
   return (
     <div className="inner">
       <header className="major">
@@ -33,7 +34,9 @@ const AboutPage = () => {
           </div>
           <Skills />
         </div>
-        <h4 id="myEmail" className={aboutStyles.myEmail} onClick={copyEmail}>click to copy: stomg7969@gmail.com</h4>
+        <h4 id="myEmail" className={aboutStyles.myEmail} onClick={emailHandler}>
+          click to copy: stomg7969@gmail.com
+        </h4> {emailClicked ? '✅' : null}
       </header>
       <ul className="icons major">
         <li>
