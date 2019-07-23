@@ -33,7 +33,7 @@ const FooterPage = (props) => {
       <ul className="copyright">
         <li>&copy; Spectral</li>
         <li>
-          Design: <a href="http://html5up.net">HTML5 UP</a>
+          Design: <a href="http://html5up.net" target="_blank">HTML5 UP</a>
         </li>
         <li>
           <a href="https://aws.amazon.com/what-is-cloud-computing" target="_blank">
