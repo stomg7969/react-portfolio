@@ -1,6 +1,7 @@
 import React from 'react';
 // import { config } from '../../config';
 import aboutStyles from '../styles/components/about.module.scss';
+import footerStyles from '../styles/components/footer.module.scss';
 
 import linkedin from '../assets/logo/linkedin.png';
 // Helper
@@ -33,6 +34,11 @@ const FooterPage = (props) => {
         <li>&copy; Spectral</li>
         <li>
           Design: <a href="http://html5up.net">HTML5 UP</a>
+        </li>
+        <li>
+          <a href="https://aws.amazon.com/what-is-cloud-computing" target="_blank">
+            <img id={footerStyles.awsLogo} src="https://d0.awsstatic.com/logos/powered-by-aws-white.png" alt="Powered by AWS Cloud Computing" />
+          </a>
         </li>
       </ul>
     </footer>
