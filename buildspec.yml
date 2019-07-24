@@ -47,7 +47,7 @@ phases:
   post_build:
     commands:
       - echo Moving files to S3...
-      # - mv build-output/**/* ./
+      - mv build-output/**/* ./
       - mv build-output/* ./
       - rm -R build-output
 artifacts:
