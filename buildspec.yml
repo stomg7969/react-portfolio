@@ -11,7 +11,7 @@ phases:
   pre_build:
     commands:
       - echo Installing Node packages...
-      # - npm install
+      - npm install
   build:
     commands:
       - echo Build initiated...
@@ -19,7 +19,9 @@ phases:
   post_build:
     commands:
       - echo Synchronizing public directory...
-      - aws s3 cp ./public/ s3://thedevelopark.com --delete
+      - aws s3 sync ./public/ s3://thedevelopark.com --delete
+      # - aws s3 sync ./public/ s3://thedevelopark.com --delete --acl "public-read"
+      # - aws s3 cp ./public/ s3://thedevelopark.com
 artifacts:
   base-directory: public
   files:
