@@ -19,7 +19,7 @@ phases:
       - npm run build
   post_build:
     commands:
-      - echo Synchronizing public directory...!
+      - echo Synchronizing public directory...
       - aws s3 sync ./public/ s3://thedevelopark.com --delete
 artifacts:
   base-directory: public
