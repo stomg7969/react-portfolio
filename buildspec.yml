@@ -28,36 +28,32 @@
 #   discard-paths: yes
 
 # Option 2 *****************************************
-version: 0.2
+# version: 0.2
 
-phases:
-  install:
-    runtime-versions:
-        nodejs: 10
-  pre_build:
-    commands:
-      - echo Removing objects in the S3 bucket...
-      - aws s3 rm s3://thedevelopark.com --recursive
-  build:
-    commands:
-      - echo Preparing for moving files to S3...
-      - mkdir build-output
-      - ls .
-      - find . -type d -name public -exec cp -R {} build-output \;
-      - find . -mindepth 1 -name build-output -prune -o -exec rm -rf {} +
-      - ls .
-  post_build:
-    commands:
-      - echo Moving files to S3...
-      - mv build-output/**/* ./
-      - ls .
-      - mv build-output/* ./
-      - ls .
-      - rm -R build-output
-      - ls .
-artifacts:
-  files:
-    - '**/*'
+# phases:
+#   install:
+#     runtime-versions:
+#         nodejs: 10
+#   pre_build:
+#     commands:
+#       - echo Removing objects in the S3 bucket...
+#       - aws s3 rm s3://thedevelopark.com --recursive
+#   build:
+#     commands:
+#       - echo Preparing for moving files to S3...
+#       - mkdir build-output
+#       - find . -type d -name public -exec cp -R {} build-output \;
+#       - ls build-output/
+#       - find . -mindepth 1 -name build-output -prune -o -exec rm -rf {} +
+#   post_build:
+#     commands:
+#       - echo Moving files to S3...
+#       - mv build-output/**/* ./
+#       - mv build-output/* ./
+#       - rm -R build-output
+# artifacts:
+#   files:
+#     - '**/*'
 
 # Option 3 *****************************************
 # version: 0.2
