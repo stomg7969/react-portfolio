@@ -1,8 +1,8 @@
 language: node_js
 node_js:
 - 11.8.0
-install: npm
-script: gatsby build
+install: npm install
+script: npm run build
 deploy:
   provider: s3
   access_key_id: $AWS_KEY
