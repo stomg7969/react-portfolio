@@ -1,31 +1,31 @@
 # Option 1 *****************************************
-# version: 0.2
+version: 0.2
 
-# phases:
-#   install:
-#     runtime-versions:
-#         nodejs: 10
-#     commands:
-#       - echo Installing Gatsby and Gatsby-CLI...
-#     #   - npm install -g gatsby
-#       # - npm install -g gatsby-cli
-#   pre_build:
-#     commands:
-#       - echo Installing Node packages...
-#       - npm install
-#   build:
-#     commands:
-#       - echo Build initiated...
-#       - npm run build
-#   post_build:
-#     commands:
-#       - echo Synchronizing public directory...!
-#       - aws s3 sync ./public/ s3://thedevelopark.com --delete
-# artifacts:
-#   base-directory: public
-#   files:
-#     - '**/*'
-#   discard-paths: yes
+phases:
+  install:
+    runtime-versions:
+        nodejs: 10
+    commands:
+      - echo Installing Gatsby and Gatsby-CLI...
+    #   - npm install -g gatsby
+      # - npm install -g gatsby-cli
+  pre_build:
+    commands:
+      - echo Installing Node packages...
+      # - npm install
+  build:
+    commands:
+      - echo Build initiated...
+      # - npm run build
+  post_build:
+    commands:
+      - echo Synchronizing public directory...!
+      - aws s3 sync ./public/ s3://thedevelopark.com --delete
+artifacts:
+  base-directory: public
+  files:
+    - '**/*'
+  discard-paths: yes
 
 # Option 2 *****************************************
 # version: 0.2
@@ -55,23 +55,23 @@
 #     - '**/*'
 
 # Option 3 *****************************************
-version: 0.2
+# version: 0.2
 
-phases:
-  install:
-    runtime-versions:
-        nodejs: 10
-  pre_build:
-    commands:
-      - echo Removing objects in the S3 bucket...
-      - aws s3 rm s3://thedevelopark.com --recursive
-  build:
-    commands:
-      - echo Doing nothing here for now...
-  post_build:
-    commands:
-      - echo Copying files in public directory to S3...
-      - aws s3 cp ./public/ s3://thedevelopark.com --recursive
-artifacts:
-  files:
-    - '**/*'
+# phases:
+#   install:
+#     runtime-versions:
+#         nodejs: 10
+#   pre_build:
+#     commands:
+#       - echo Removing objects in the S3 bucket...
+#       - aws s3 rm s3://thedevelopark.com --recursive
+#   build:
+#     commands:
+#       - echo Doing nothing here for now...
+#   post_build:
+#     commands:
+#       - echo Copying files in public directory to S3...
+#       - aws s3 cp ./public/ s3://thedevelopark.com --recursive
+# artifacts:
+#   files:
+#     - '**/*'
