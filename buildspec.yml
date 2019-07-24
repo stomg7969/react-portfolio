@@ -61,10 +61,10 @@ phases:
   install:
     runtime-versions:
         nodejs: 10
-    commands:
-      - echo Installing Gatsby and Gatsby-CLI...
-      - npm install -g gatsby
-      - npm install -g gatsby-cli
+    # commands:
+    #   - echo Installing Gatsby and Gatsby-CLI...
+    #   - npm install -g gatsby
+    #   - npm install -g gatsby-cli
   pre_build:
     commands:
       - echo Installing Node packages...
@@ -78,19 +78,19 @@ phases:
       - echo Synchronizing public directory...!
       - aws s3 rm s3://thedevelopark.com --recursive
       - aws s3 cp ./public/ s3://thedevelopark.com --recursive
-artifacts:
-  files:
-    - .env.development
-    - .gitignore
-    - .prettierrc
-    - buildspec.yml
-    - config.js
-    - gatsby-browser.js
-    - gatsby-config.js
-    - gatsby-node.js
-    - gatsby-ssr.js
-    - LICENSE
-    - package.json
-    - README.md
-    - .vscode/**/*
-    - src/**/*
+# artifacts:
+#   files:
+#     - .env.development
+#     - .gitignore
+#     - .prettierrc
+#     - buildspec.yml
+#     - config.js
+#     - gatsby-browser.js
+#     - gatsby-config.js
+#     - gatsby-node.js
+#     - gatsby-ssr.js
+#     - LICENSE
+#     - package.json
+#     - README.md
+#     - .vscode/**/*
+#     - src/**/*
