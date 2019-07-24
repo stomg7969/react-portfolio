@@ -1,29 +1,54 @@
+# version: 0.2
+
+# phases:
+#   install:
+#     runtime-versions:
+#         nodejs: 10
+#     commands:
+#       - echo Installing Gatsby and Gatsby-CLI...
+#     #   - npm install -g gatsby
+#       # - npm install -g gatsby-cli
+#   pre_build:
+#     commands:
+#       - echo Installing Node packages...
+#       - npm install
+#   build:
+#     commands:
+#       - echo Build initiated...
+#       - npm run build
+#   post_build:
+#     commands:
+#       - echo Synchronizing public directory...!
+#       - aws s3 sync ./public/ s3://thedevelopark.com --delete
+# artifacts:
+#   base-directory: public
+#   files:
+#     - '**/*'
+#   discard-paths: yes
+
+# Another way
 version: 0.2
 
 phases:
   install:
     runtime-versions:
         nodejs: 10
-    commands:
-      - echo Installing Gatsby and Gatsby-CLI...
-    #   - npm install -g gatsby
-      # - npm install -g gatsby-cli
   pre_build:
     commands:
-      - echo Installing Node packages...
-      - npm install
+      - echo Removing objects in the S3 bucket...
+      - aws s3 rm s3://thedevelopark.com --recursive
   build:
     commands:
-      - echo Build initiated...
-      - npm run build
+      - echo Preparing for moving files to S3...
+      - mkdir build-output
+      - find . -type d -name public -exec cp -R {} build-output \;
+      - find . -mindepth 1 -name build-output -prune -o -exec rm -rf {} +
   post_build:
     commands:
-      - echo Synchronizing public directory...!
-      - aws s3 sync ./public/ s3://thedevelopark.com --delete
-      # - aws s3 sync ./public/ s3://thedevelopark.com --delete --acl "public-read"
-      # - aws s3 cp ./public/ s3://thedevelopark.com
+      - echo Moving files to S3...
+      - mv build-output/**/* ./
+      - mv build-output/* ./
+      - rm -R build-output
 artifacts:
-  base-directory: public
   files:
     - '**/*'
-  discard-paths: yes
