@@ -46,7 +46,7 @@ phases:
       - find . -mindepth 1 -name build-output -prune -o -exec rm -rf {} +
   post_build:
     commands:
-      - echo Moving files to S3....
+      - echo Moving files to S3...
       # - mv build-output/**/* ./
       - mv build-output/* ./
       - rm -R build-output
