@@ -7,12 +7,12 @@ phases:
         nodejs: 10
     commands:
       - echo Installing Gatsby and Gatsby-CLI...
-    #   - npm install -g gatsby
-      # - npm install -g gatsby-cli
+      - npm install -g gatsby
+      - npm install -g gatsby-cli
   pre_build:
     commands:
       - echo Installing Node packages...
-      # - npm install
+      - npm install
   build:
     commands:
       - echo Build initiated...
