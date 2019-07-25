@@ -12,6 +12,17 @@ const BlogPage = () => {
           <h2>blogs</h2>
         </header>
         <ul id={blogStyles.background} className="features">
+          <li className="icon solid fa-headphones-alt">
+            <h4>Deploying a static website: GatsbyJS to AWS S3 (and more)</h4>
+            <p>
+              Today, deploying a personal website is easier than ever. There
+              are hosting websites ... However ...
+            </p>
+            <i>JULY 25, 2019</i><br />
+            <a href="https://medium.com/@stomg7969/deploying-a-static-website-gatsbyjs-to-aws-s3-and-more-a1c496527576" target="_blank">
+              <img className={blogStyles.blogImage} src={medium2} alt="medium word logo" />
+            </a>
+          </li>
           <li className="icon fa-paper-plane">
             <h4>Creating a multi-filter function to filter ...</h4>
             <p>
@@ -35,24 +46,13 @@ const BlogPage = () => {
             </a>
           </li>
           <li className="icon solid fa-code">
-            <h4>Use your time more efficiently (Javascript Frontend).</h4>
+            <h4>Use your time more efficiently (Javascript Frontend)</h4>
             <p>
               When you have to work under time pressure, it would be more productive
               if ...
             </p>
             <i>MARCH 26, 2019</i><br />
             <a href="https://medium.com/@stomg7969/use-your-time-more-efficiently-javascript-frontend-8274ba2e75f9" target="_blank">
-              <img className={blogStyles.blogImage} src={medium2} alt="medium word logo" />
-            </a>
-          </li>
-          <li className="icon solid fa-headphones-alt">
-            <h4>Let’s be Test-driven Development (TDD).</h4>
-            <p>
-              Flatiron School students learn materials from Learn.co. Through
-              our terminal, we use the commnads: 'learn open', 'learn', and ...
-            </p>
-            <i>MARCH 5, 2019</i><br />
-            <a href="https://medium.com/@stomg7969/lets-be-test-driven-development-tdd-a974a5c63919" target="_blank">
               <img className={blogStyles.blogImage} src={medium2} alt="medium word logo" />
             </a>
           </li>
