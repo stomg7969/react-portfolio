@@ -1,5 +1,5 @@
 const config = {
-  siteTitle: 'Gatsby Starter Spectral', // <title>
+  siteTitle: 'The DeveloPark', // <title>
   manifestName: 'Spectral',
   manifestShortName: 'Landing', // max 12 characters
   manifestStartUrl: '/',
