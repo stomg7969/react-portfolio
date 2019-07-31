@@ -53,7 +53,7 @@ const BlogPage = () => {
             </p>
             <i>MARCH 26, 2019</i><br />
             <a href="https://medium.com/@stomg7969/use-your-time-more-efficiently-javascript-frontend-8274ba2e75f9" target="_blank">
-              <img className={blogStyles.blogImage} src={medium2} alt="medium word logo" />
+              <img className={blogStyles.blogImage} src={medium2} alt="medium name logo" />
             </a>
           </li>
           {/* <li className="icon fa-heart">
