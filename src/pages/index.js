@@ -100,3 +100,17 @@ const IndexPage = () => {
 };
 
 export default IndexPage;
+
+// IMPORTANT! The order must be the same as following.
+
+// 1.
+// npm run build
+// When running 'npm run build', GatsbyJS will run: 'npm run clean' && 'gatsby build'
+
+// 2.
+// aws s3 sync ./public/ s3://thedevelopark.com --delete
+// Sync files in public directory to S3 and delete all files in S3 bucket.
+
+// 3.
+// git add <fileName> && git commit -m "<message>" && git push
+// The push your codes to your repository.
